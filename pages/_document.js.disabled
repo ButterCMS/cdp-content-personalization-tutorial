@@ -1,0 +1,25 @@
+// In `pages/_document.js`
+import { Html, Head, Main, NextScript } from "next/document";
+import Script from "next/script";
+
+export default function Document() {
+  return (
+    <Html>
+      <Head />
+      <body>
+        <Main />
+        <NextScript />
+        <Script
+          id="personyze-script"
+          src="/personyze-snippet.js"
+          strategy="lazyOnload"
+          onLoad={() =>
+            console.log(
+              `script loaded correctly, ${window.analytics} has been populated`
+            )
+          }
+        />
+      </body>
+    </Html>
+  );
+}

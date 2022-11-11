@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-100;
+}
+
+.cta {
+  @apply w-fit bg-slate-100 text-black font-medium px-5 py-2.5 rounded-xl;
+}
